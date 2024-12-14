@@ -1,7 +1,7 @@
 *** Notes
 
 I have deployed this API in Koyeb, but also the files could be run locally.
-The url to run in Koyeb is this one: silent-charin-eci-f3343bab.koyeb.app/predict/ 
+The url to run in Koyeb is this one: http://silent-charin-eci-f3343bab.koyeb.app/predict/ 
 
 This github repo is : https://github.com/davidruiz713/test-insy/ 
 
