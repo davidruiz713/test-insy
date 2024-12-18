@@ -23,10 +23,3 @@ steps:
 
 options:
   logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging for logs
-
-serviceAccount: 1012458164437-compute@developer.gserviceaccount.com  # Specify your service account
-
-# Optional: If you'd like to store logs in a custom bucket, use this instead of 'REGIONAL_USER_OWNED_BUCKET':
-# options:
-#   logging: REGIONAL_USER_OWNED_BUCKET
-#   logsBucket: gs://YOUR_BUCKET_NAME  # Specify your logs bucket
