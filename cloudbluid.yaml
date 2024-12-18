@@ -22,7 +22,7 @@ steps:
       - '--allow-unauthenticated'
 
 options:
-  logging: REGIONAL_USER_OWNED_BUCKET  # Use regional user-owned bucket for logs
+  logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging for logs
 
 serviceAccount: 1012458164437-compute@developer.gserviceaccount.com  # Specify your service account
 
