@@ -1,0 +1,32 @@
+steps:
+  # Step 1: Build the Docker image for FastAPI
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/practical-gecko-445113-h6/fastapi-app', '.']
+
+  # Step 2: Push the Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/practical-gecko-445113-h6/fastapi-app']
+
+  # Step 3: Deploy the app to Google Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'fastapi-app'
+      - '--image'
+      - 'gcr.io/practical-gecko-445113-h6/fastapi-app'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'us-central1'  # Modify to the desired region
+      - '--allow-unauthenticated'
+
+options:
+  logging: REGIONAL_USER_OWNED_BUCKET  # Use regional user-owned bucket for logs
+
+serviceAccount: 1012458164437-compute@developer.gserviceaccount.com  # Specify your service account
+
+# Optional: If you'd like to store logs in a custom bucket, use this instead of 'REGIONAL_USER_OWNED_BUCKET':
+# options:
+#   logging: REGIONAL_USER_OWNED_BUCKET
+#   logsBucket: gs://YOUR_BUCKET_NAME  # Specify your logs bucket
