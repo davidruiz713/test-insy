@@ -23,6 +23,4 @@ steps:
 
 options:
   serviceAccount: david-cloud-acc@practical-gecko-445113-h6.iam.gserviceaccount.com
-  build:
-    options:
-      default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+  logging: CLOUD_LOGGING_ONLY  # Uncomment this line to use Cloud Logging only
