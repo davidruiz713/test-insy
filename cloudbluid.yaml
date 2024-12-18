@@ -22,4 +22,4 @@ steps:
       - '--allow-unauthenticated'
 
 options:
-  logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging for logs
+  logging: REGIONAL_USER_OWNED_BUCKET  # Use default regional user-owned bucket for logs
