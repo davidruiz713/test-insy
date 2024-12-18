@@ -162,6 +162,11 @@ def set_color(color_request: ColorRequest):
     selected_color = color_request.color
     return {"message": "Color updated successfully", "new_color": selected_color}
 
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8080))
+    app.run(debug=True, host='0.0.0.0', port=port)
+
 # Custom handler for undefined routes
 @app.exception_handler(404)
 async def custom_404_handler(request: Request, exc):
