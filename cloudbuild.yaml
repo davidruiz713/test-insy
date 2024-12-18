@@ -22,6 +22,7 @@ steps:
       - '--allow-unauthenticated'
 
 options:
+  serviceAccount: david-cloud-acc@practical-gecko-445113-h6.iam.gserviceaccount.com
   logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging for logs
   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET  # Use default regional log bucket
 
